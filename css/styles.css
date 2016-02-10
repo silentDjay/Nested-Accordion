@@ -1,0 +1,45 @@
+/*Styling for all rendered content*/
+
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  background-color: #FFFDFA;
+}
+
+/*Styling for each individual section*/
+
+section {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3em;
+}
+
+/*Styling for section titles*/
+
+h2 {
+  border-bottom-style: solid;
+  border-bottom-color: #9B8347;
+  border-bottom-width: 3px;
+  padding-bottom: .4em;
+  font-size: 3em;
+}
+
+/*Styling for the icon*/
+.icon {
+  color: #9B8347;
+  display: inline-block;
+}
+
+/*Styling for the text in the title*/
+
+.titleText {
+  display: inline-block;
+}
+
+/*Styling for the paragraph part of the section*/
+
+p {
+  margin-top: 1em;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  /*display:none;*/
+}

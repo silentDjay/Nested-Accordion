@@ -20,3 +20,4 @@ In order to make these changes, we will need to use the following CSS styles:
 
 color
 -webkit-transform:rotate(xdeg)
+display: none
