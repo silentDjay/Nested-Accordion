@@ -18,7 +18,7 @@ section {
 h2 {
   border-bottom-style: solid;
   border-bottom-color: #9B8347;
-  border-bottom-width: 3px;
+  border-bottom-width: 2px;
   padding-bottom: .4em;
   font-size: 3em;
 }
@@ -40,7 +40,8 @@ h2 {
 
 .body {
   margin-top: 1em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.4em;
+  color: #9B8347;
   display:none;
 }

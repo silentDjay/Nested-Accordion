@@ -1,4 +1,6 @@
 // Set variables for each ID of each element that needs to be changed
+// so they can be modified via javascript individually
+// There's gotta be a better way to do this (jquery?????)
 
 var section1JS = document.querySelector("#titleBox1");
 var section2JS = document.querySelector("#titleBox2");
@@ -12,81 +14,100 @@ var showHideText = document.querySelector("#body1");
 var showHideText2 = document.querySelector("#body2");
 var showHideText3 = document.querySelector("#body3");
 var showHideText4 = document.querySelector("#body4");
+var downArrow1 = document.querySelector("#arrow1");
+var downArrow2 = document.querySelector("#arrow2");
+var downArrow3 = document.querySelector("#arrow3");
+var downArrow4 = document.querySelector("#arrow4");
+
+// change both the display style of the <p> below each section
+// headers AND the rotation of the arrow icon upon a click
 
 section1JS.addEventListener("click", function () {
   if (showHideText.style.display === ""){
     showHideText.style.display = "inline-block";//shows the text
-    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
-    }
+    downArrow1.className = "fa fa-arrow-right fa-rotate-90";
+  }
   else if (showHideText.style.display === "inline-block"){
     showHideText.style.display = "";// hides the text
-    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+    downArrow1.className = "fa fa-arrow-right";
   }
 });
 
 section2JS.addEventListener("click", function () {
   if (showHideText2.style.display === ""){
-    showHideText2.style.display = "inline-block";//shows the text
-    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
-    }
+    showHideText2.style.display = "inline-block";
+    downArrow2.className = "fa fa-arrow-right fa-rotate-90";
+  }
   else if (showHideText2.style.display === "inline-block"){
-    showHideText2.style.display = "";// hides the text
-    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+    showHideText2.style.display = "";
+    downArrow2.className = "fa fa-arrow-right";
   }
 });
 
 section3JS.addEventListener("click", function () {
   if (showHideText3.style.display === ""){
-    showHideText3.style.display = "inline-block";//shows the text
-    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
-    }
+    showHideText3.style.display = "inline-block";
+    downArrow3.className = "fa fa-arrow-right fa-rotate-90";
+  }
   else if (showHideText3.style.display === "inline-block"){
-    showHideText3.style.display = "";// hides the text
-    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+    showHideText3.style.display = "";
+    downArrow3.className = "fa fa-arrow-right";
   }
 });
 
 section4JS.addEventListener("click", function () {
   if (showHideText4.style.display === ""){
-    showHideText4.style.display = "inline-block";//shows the text
-    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
-    }
+    showHideText4.style.display = "inline-block";
+    downArrow4.className = "fa fa-arrow-right fa-rotate-90";
+  }
   else if (showHideText4.style.display === "inline-block"){
-    showHideText4.style.display = "";// hides the text
-    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+    showHideText4.style.display = "";
+    downArrow4.className = "fa fa-arrow-right";
   }
 });
 
+//when a cursor goes over each individual section, the arrow
+//icon associated with that section will change color.
+//when the cursor moves away again, the color will change back
+
 section1JS.addEventListener("mouseover", function () {
   arrow1ColorShift.style.color = "#003A6C";
+  //downArrow1.className = "fa fa-arrow-right  fa-rotate-45";//these didn't work, so I'm commenting them out
 });
 
 section1JS.addEventListener("mouseout", function () {
-  arrow1ColorShift.style.color = "#9B8347"; //changes back to gold
+  arrow1ColorShift.style.color = "#9B8347";
+  //downArrow1.className = "fa fa-arrow-right";
 });
 
 section2JS.addEventListener("mouseover", function () {
   arrow2ColorShift.style.color = "#003A6C";
+  //downArrow2.className = "fa fa-arrow-right  fa-rotate-45";
 });
 
 section2JS.addEventListener("mouseout", function () {
-  arrow2ColorShift.style.color = "#9B8347"; //changes back to gold
+  arrow2ColorShift.style.color = "#9B8347";
+  //downArrow2.className = "fa fa-arrow-right";
 });
 
 section3JS.addEventListener("mouseover", function () {
   arrow3ColorShift.style.color = "#003A6C";
+  //downArrow3.className = "fa fa-arrow-right  fa-rotate-45";
 });
 
 section3JS.addEventListener("mouseout", function () {
-  arrow3ColorShift.style.color = "#9B8347"; //changes back to gold
+  arrow3ColorShift.style.color = "#9B8347";
+  //downArrow3.className = "fa fa-arrow-right";
 });
 
 section4JS.addEventListener("mouseover", function () {
   arrow4ColorShift.style.color = "#003A6C";
+  //downArrow4.className = "fa fa-arrow-right  fa-rotate-45";
 });
 
 section4JS.addEventListener("mouseout", function () {
-  arrow4ColorShift.style.color = "#9B8347"; //changes back to gold
+  arrow4ColorShift.style.color = "#9B8347";
+  //downArrow4.className = "fa fa-arrow-right";
 });
 
 // this was an attempt to put a for loop inside of my eventListener. It didn't make much sense
