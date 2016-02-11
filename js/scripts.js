@@ -25,6 +25,9 @@ var downArrow4 = document.querySelector("#arrow4");
 section1JS.addEventListener("click", function () {
   if (showHideText.style.display === ""){
     showHideText.style.display = "inline-block";//shows the text
+    showHideText2.style.display = "";//hides the other text
+    showHideText3.style.display = "";
+    showHideText4.style.display = "";
     downArrow1.className = "fa fa-arrow-right fa-rotate-90";
   }
   else if (showHideText.style.display === "inline-block"){
@@ -36,6 +39,9 @@ section1JS.addEventListener("click", function () {
 section2JS.addEventListener("click", function () {
   if (showHideText2.style.display === ""){
     showHideText2.style.display = "inline-block";
+    showHideText.style.display = "";//hides the other text
+    showHideText3.style.display = "";
+    showHideText4.style.display = "";
     downArrow2.className = "fa fa-arrow-right fa-rotate-90";
   }
   else if (showHideText2.style.display === "inline-block"){
@@ -47,6 +53,9 @@ section2JS.addEventListener("click", function () {
 section3JS.addEventListener("click", function () {
   if (showHideText3.style.display === ""){
     showHideText3.style.display = "inline-block";
+    showHideText.style.display = "";//hides the other text
+    showHideText2.style.display = "";
+    showHideText4.style.display = "";
     downArrow3.className = "fa fa-arrow-right fa-rotate-90";
   }
   else if (showHideText3.style.display === "inline-block"){
@@ -58,6 +67,9 @@ section3JS.addEventListener("click", function () {
 section4JS.addEventListener("click", function () {
   if (showHideText4.style.display === ""){
     showHideText4.style.display = "inline-block";
+    showHideText.style.display = "";//hides the other text
+    showHideText2.style.display = "";
+    showHideText3.style.display = "";
     downArrow4.className = "fa fa-arrow-right fa-rotate-90";
   }
   else if (showHideText4.style.display === "inline-block"){
