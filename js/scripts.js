@@ -29,6 +29,9 @@ section1JS.addEventListener("click", function () {
     showHideText3.style.display = "";
     showHideText4.style.display = "";
     downArrow1.className = "fa fa-arrow-right fa-rotate-90";
+    downArrow2.className = "fa fa-arrow-right";
+    downArrow3.className = "fa fa-arrow-right";
+    downArrow4.className = "fa fa-arrow-right";
   }
   else if (showHideText.style.display === "inline-block"){
     showHideText.style.display = "";// hides the text
@@ -43,6 +46,9 @@ section2JS.addEventListener("click", function () {
     showHideText3.style.display = "";
     showHideText4.style.display = "";
     downArrow2.className = "fa fa-arrow-right fa-rotate-90";
+    downArrow1.className = "fa fa-arrow-right";
+    downArrow3.className = "fa fa-arrow-right";
+    downArrow4.className = "fa fa-arrow-right";
   }
   else if (showHideText2.style.display === "inline-block"){
     showHideText2.style.display = "";
@@ -57,6 +63,9 @@ section3JS.addEventListener("click", function () {
     showHideText2.style.display = "";
     showHideText4.style.display = "";
     downArrow3.className = "fa fa-arrow-right fa-rotate-90";
+    downArrow1.className = "fa fa-arrow-right";
+    downArrow2.className = "fa fa-arrow-right";
+    downArrow4.className = "fa fa-arrow-right";
   }
   else if (showHideText3.style.display === "inline-block"){
     showHideText3.style.display = "";
@@ -71,6 +80,9 @@ section4JS.addEventListener("click", function () {
     showHideText2.style.display = "";
     showHideText3.style.display = "";
     downArrow4.className = "fa fa-arrow-right fa-rotate-90";
+    downArrow1.className = "fa fa-arrow-right";
+    downArrow2.className = "fa fa-arrow-right";
+    downArrow3.className = "fa fa-arrow-right";
   }
   else if (showHideText4.style.display === "inline-block"){
     showHideText4.style.display = "";
