@@ -1,43 +1,93 @@
-// the lines below are an example of something that works! Use it wisely
-// // Gets the first h1 on the page
-//     var newText = document.querySelector('h2');
-//
-//     // Updates the h1 to show 'How are you?'
-//     newText.textContent = "What's up, Javascript??";
+// Set variables for each ID of each element that needs to be changed
 
-//change the color of the arrow on a mouseOver
+var section1JS = document.querySelector("#titleBox1");
+var section2JS = document.querySelector("#titleBox2");
+var section3JS = document.querySelector("#titleBox3");
+var section4JS = document.querySelector("#titleBox4");
+var arrow1ColorShift = document.querySelector("#icon1");
+var arrow2ColorShift = document.querySelector("#icon2");
+var arrow3ColorShift = document.querySelector("#icon3");
+var arrow4ColorShift = document.querySelector("#icon4");
+var showHideText = document.querySelector("#body1");
+var showHideText2 = document.querySelector("#body2");
+var showHideText3 = document.querySelector("#body3");
+var showHideText4 = document.querySelector("#body4");
 
-var sectionJS = document.querySelector(".titleBox");
-var arrowColorShift = document.querySelector(".icon");
-var showHideText = document.querySelector(".body");
-
-sectionJS.addEventListener("click", function () {
+section1JS.addEventListener("click", function () {
   if (showHideText.style.display === ""){
     showHideText.style.display = "inline-block";//shows the text
-    arrowColorShift.style.color = "#003A6C";
+    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
     }
   else if (showHideText.style.display === "inline-block"){
     showHideText.style.display = "";// hides the text
-    arrowColorShift.style.color = "#9B8347";
+    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
   }
 });
 
-sectionJS.addEventListener("mouseover", function () {
-  arrowColorShift.style.color = "#003A6C";
+section2JS.addEventListener("click", function () {
+  if (showHideText2.style.display === ""){
+    showHideText2.style.display = "inline-block";//shows the text
+    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
+    }
+  else if (showHideText2.style.display === "inline-block"){
+    showHideText2.style.display = "";// hides the text
+    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+  }
 });
 
-sectionJS.addEventListener("mouseout", function () {
-  arrowColorShift.style.color = "#9B8347"; //changes back to gold
+section3JS.addEventListener("click", function () {
+  if (showHideText3.style.display === ""){
+    showHideText3.style.display = "inline-block";//shows the text
+    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
+    }
+  else if (showHideText3.style.display === "inline-block"){
+    showHideText3.style.display = "";// hides the text
+    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+  }
 });
-//this didn't work - mouseover doesn't have an 'end'
-// sectionJS.addEventListener("mouseover", function () {
-//   if (arrowColorShift.style.color === "#003A6C"){
-//     arrowColorShift.style.color = "#9B8347";//changes the color of the arrow upon a mouseover
-//   } else if (arrowColorShift.style.color === "#9B8347") {
-//     arrowColorShift.style.color = "#003A6C";
-//   }
-// });
 
+section4JS.addEventListener("click", function () {
+  if (showHideText4.style.display === ""){
+    showHideText4.style.display = "inline-block";//shows the text
+    //arrow1ColorShift.style.color = "#003A6C"; this doesn't work
+    }
+  else if (showHideText4.style.display === "inline-block"){
+    showHideText4.style.display = "";// hides the text
+    //arrow1ColorShift.style.color = "#9B8347"; this doesn't work
+  }
+});
+
+section1JS.addEventListener("mouseover", function () {
+  arrow1ColorShift.style.color = "#003A6C";
+});
+
+section1JS.addEventListener("mouseout", function () {
+  arrow1ColorShift.style.color = "#9B8347"; //changes back to gold
+});
+
+section2JS.addEventListener("mouseover", function () {
+  arrow2ColorShift.style.color = "#003A6C";
+});
+
+section2JS.addEventListener("mouseout", function () {
+  arrow2ColorShift.style.color = "#9B8347"; //changes back to gold
+});
+
+section3JS.addEventListener("mouseover", function () {
+  arrow3ColorShift.style.color = "#003A6C";
+});
+
+section3JS.addEventListener("mouseout", function () {
+  arrow3ColorShift.style.color = "#9B8347"; //changes back to gold
+});
+
+section4JS.addEventListener("mouseover", function () {
+  arrow4ColorShift.style.color = "#003A6C";
+});
+
+section4JS.addEventListener("mouseout", function () {
+  arrow4ColorShift.style.color = "#9B8347"; //changes back to gold
+});
 
 // this was an attempt to put a for loop inside of my eventListener. It didn't make much sense
 //
@@ -57,8 +107,3 @@ sectionJS.addEventListener("mouseout", function () {
 // document.querySelector(".body").onclick = function() {
 //     style = "display:inline-block";
 // }
-
-
-// sectionJS.addEventListener("click", function () {
-//   hideText.style = "display:none";//hides??? the paragraph upon a click of the section
-// }, false);
