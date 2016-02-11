@@ -19,6 +19,28 @@ var downArrow2 = document.querySelector("#arrow2");
 var downArrow3 = document.querySelector("#arrow3");
 var downArrow4 = document.querySelector("#arrow4");
 
+// this was an attempt to put a for loop inside of my eventListener. The first click worked, but the second didn't because the clickCount variable didn't continue to iterate after multiple clicks
+//
+// section1JS.addEventListener("click", function () {
+//   for (clickCount = 3; clickCount <= 1000; clickCount++){
+//     if (clickCount % 2 === 0) {
+//       showHideText.style.display = "inline-block";//shows the paragraph upon a click of the section
+//       showHideText2.style.display = "";//hides the other text
+//       showHideText3.style.display = "";
+//       showHideText4.style.display = "";
+//       downArrow1.className = "fa fa-arrow-right fa-rotate-90";
+//       downArrow2.className = "fa fa-arrow-right";//changes the other arrows back to default
+//       downArrow3.className = "fa fa-arrow-right";
+//       downArrow4.className = "fa fa-arrow-right";
+//     }
+//     else {
+//       showHideText.style.display = "";//hides the paragraph
+//       downArrow1.className = "fa fa-arrow-right";
+//     }
+//   }
+//
+// });
+
 // change both the display style of the <p> below each section
 // headers AND the rotation of the arrow icon upon a click
 
@@ -29,11 +51,11 @@ section1JS.addEventListener("click", function () {
     showHideText3.style.display = "";
     showHideText4.style.display = "";
     downArrow1.className = "fa fa-arrow-right fa-rotate-90";
-    downArrow2.className = "fa fa-arrow-right";
+    downArrow2.className = "fa fa-arrow-right";//changes the other arrows back to default
     downArrow3.className = "fa fa-arrow-right";
     downArrow4.className = "fa fa-arrow-right";
   }
-  else if (showHideText.style.display === "inline-block"){
+  else { // I had this as an else if (showHideText.style.display === "inline-block") BUT I DON'T NEED IT!!
     showHideText.style.display = "";// hides the text
     downArrow1.className = "fa fa-arrow-right";
   }
@@ -50,7 +72,7 @@ section2JS.addEventListener("click", function () {
     downArrow3.className = "fa fa-arrow-right";
     downArrow4.className = "fa fa-arrow-right";
   }
-  else if (showHideText2.style.display === "inline-block"){
+  else {
     showHideText2.style.display = "";
     downArrow2.className = "fa fa-arrow-right";
   }
@@ -67,7 +89,7 @@ section3JS.addEventListener("click", function () {
     downArrow2.className = "fa fa-arrow-right";
     downArrow4.className = "fa fa-arrow-right";
   }
-  else if (showHideText3.style.display === "inline-block"){
+  else {
     showHideText3.style.display = "";
     downArrow3.className = "fa fa-arrow-right";
   }
@@ -84,7 +106,7 @@ section4JS.addEventListener("click", function () {
     downArrow2.className = "fa fa-arrow-right";
     downArrow3.className = "fa fa-arrow-right";
   }
-  else if (showHideText4.style.display === "inline-block"){
+  else {
     showHideText4.style.display = "";
     downArrow4.className = "fa fa-arrow-right";
   }
