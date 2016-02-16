@@ -29,6 +29,13 @@ h2 {
   display: inline-block;
 }
 
+/*Styling for the icon when it is rotated via jquery*/
+
+.rotate {
+  transform: rotate(90deg);
+  color: #003A6C;
+}
+
 /*Styling for the text in the title*/
 
 .titleText {
@@ -38,7 +45,7 @@ h2 {
 
 /*Styling for the paragraph part of the section*/
 
-.body {
+.hiddenText {
   margin-top: 1em;
   font-size: 1.3em;
   line-height: 1.4em;
