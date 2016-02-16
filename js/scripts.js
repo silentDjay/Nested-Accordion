@@ -19,7 +19,7 @@ var downArrow2 = document.querySelector("#arrow2");
 var downArrow3 = document.querySelector("#arrow3");
 var downArrow4 = document.querySelector("#arrow4");
 
-// this was an attempt to put a for loop inside of my eventListener. The first click worked, but the second didn't because the clickCount variable didn't continue to iterate after multiple clicks
+// this was an attempt to put a for loop inside of my eventListener. The first click worked, but the second didn't because the clickCount variable iterates to the end of the for loop, resulting in clickCount = 1001
 //
 // section1JS.addEventListener("click", function () {
 //   for (clickCount = 3; clickCount <= 1000; clickCount++){
