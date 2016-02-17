@@ -4,25 +4,31 @@ $(function () {
 //create an eventListener on the object containing the sections (<body>), or maybe all <sections>
 //it should:
 
-// 1. check if the style.display of the thing you're clicking on === ""
-// 2. changes that style.display to inline-block
-// 3. changes the style.display of all other <p>s to ""
-// 4. changes the arrow on the clicked header to downward (addClass)
-// changes all other arrows back to default position
-// 5. changes the color of the arrow to #003A6C
-// 6. changes all other arrows back to #9B8347
-
 $("h2").on("click", function () {
-    $(".hiddenText").toggle();//this toggles the css.display property of the target object
-    $("i").toggleClass("rotate");//this toggles adding/removing the 'rotate' class to every icon
+  $(this).siblings().toggle();//this toggles the css.display property of the target object
+  $(this).children(":first").removeClass("rotate45");//removes the hoverover styling upon click
+  $(this).children(":first").toggleClass("rotate");//adds the click styling
+  console.log("$(this).parents().children().filter('p').attr('class') is " + $(this).parents().children().filter("p").attr("class"));
+
+  // $("h2").parents().children().filter("p").attr("class")
+
+  // $(this).parents().children().filter("p").not("this.siblings()")toggle();
+
+  // $(this).parents().children().filter("p").not("this.siblings()").toggle();
 });
 
-// mouseover/out
-// 1. check to see if arrow has class fa-rotate-90
-// 2. if SO, do NOTHING upon mouseout/over
-// if NOT:
-// 1. upon mouseover on an arrow, change the rotation (via class) of the arrow to fa-rotate-45
-// 2. upon mouseover on an arrow, change the color (via css.("color")) to #003A6C OR VIA CSS??
-// 3. upon mouseout, change the rotation back to default (removeClass) and the color back to #9B8347 OR VIA CSS??
+// .css("display")
+
+$("h2").on("mouseover", function () {
+  if (!$(this).children(":first").attr("class").includes("rotate")) { //if the header that was clicked's first child's class list does not already include "rotate" (meaning it hasn't been clicked/expanded), THEN
+  $(this).children(":first").addClass("rotate45");// change the color and rotate it 45 degrees
+  } else { // and if that wasn't the case...
+    return false;
+  }
+});
+
+$("h2").on("mouseout", function () {
+  $(this).children(":first").removeClass("rotate45");//no need to have if statement here - the only time the arrow should rotate 45 degrees is when a mouse is over it, regardless of whether it's been clicked
+});
 
 });

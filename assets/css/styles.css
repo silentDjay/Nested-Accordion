@@ -29,12 +29,20 @@ h2 {
   display: inline-block;
 }
 
-/*Styling for the icon when it is rotated via jquery*/
+/*Styling for the div containing icon when it is rotated via jquery*/
 
 .rotate {
   transform: rotate(90deg);
   color: #003A6C;
 }
+
+/*Styling for the arrow icon upon mouseover*/
+
+.rotate45 {
+  transform: rotate(45deg);
+  color: #003A6C;
+}
+
 
 /*Styling for the text in the title*/
 
