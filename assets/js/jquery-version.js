@@ -1,3 +1,5 @@
+//this is still not working properly upon multiple clicks. I'm toggling too many things
+
 $(function () {
   "use strict";
 
