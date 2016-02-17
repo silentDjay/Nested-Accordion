@@ -36,7 +36,7 @@ h2 {
   color: #003A6C;
 }
 
-/*Styling for the arrow icon upon mouseover*/
+/*Styling for the arrow icon upon jquery mouseover*/
 
 .rotate45 {
   transform: rotate(45deg);
