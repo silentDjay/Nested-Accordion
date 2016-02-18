@@ -26,7 +26,7 @@ $("h2").on("click", function () {
       return false;//do nothing
     } else {
   	  var iElement = $("h2").siblings()[i];//$("h2").siblings()[i].css("display", "") threw an error, so I'm creating a variable instead
-      $(iElement).css("display", "");//change the css display of the thing to 'none'
+      $(iElement).toggle();//toggle the css display of the thing to 'none'
     }
   }
 
